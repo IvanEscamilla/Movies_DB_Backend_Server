@@ -22,7 +22,7 @@ class Users extends CI_Controller {
 	public function insert_movies_info()
 	{
 		//Load http request raw data and decoded params to class
-        $this->httpData = $this->input->post('data');
+        $this->httpData = $this->input->get_post('data');
 
         if((!is_string($this->httpData)) && ((is_array($this->httpData)) || (is_object($this->httpData))))
         {
@@ -32,8 +32,9 @@ class Users extends CI_Controller {
         {
             $this->httpParams = json_decode($this->httpData);
         }
+        
 		$movie = $this->httpParams->movie;
-		var_dump($movie);
+		
 		$this->load->model("database/Init");
 
 		$response["status"] = $this->Init->insert_movie_data($movie);

@@ -15,10 +15,10 @@ class Init extends CI_Model {
         $temp = "";
         for($i = 0; $i < count($data)-1; $i++) 
         {
-            $temp .= $data[$i] . $delimiter." "; 
+            $temp .= " ".$data[$i] . $delimiter; 
         }
 
-        $temp .= $data[count($data)- 1];
+        $temp .= " ".$data[count($data)- 1];
 
         return $temp;
     }

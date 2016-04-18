@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Movies extends CORS_Controller {
+class Movies extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,7 +22,7 @@ class Movies extends CORS_Controller {
 	public function get_movie_info()
 	{
 		//Load http request raw data and decoded params to class
-        $this->httpData = $this->input->post('data');
+        $this->httpData = $this->input->get_post('data');
 
         if((!is_string($this->httpData)) && ((is_array($this->httpData)) || (is_object($this->httpData))))
         {
@@ -33,13 +33,12 @@ class Movies extends CORS_Controller {
             $this->httpParams = json_decode($this->httpData);
         }
 
-		$movie_info = $this->httpParams->movie;
+		$query = $this->httpParams;
 		
-		var_dump($movie);
-		$this->load->model("database/Init");
+		$this->load->model("database/get");
 
-		$response["status"] = $this->Init->insert_movie_data($movie);
-		
+		$response["result"] = $this->get->get_movie_data($query->movie_info);
+		$response["status"] = "OK";
 		die(json_encode(json_decode(json_encode($response), true)));
 	}
 }
