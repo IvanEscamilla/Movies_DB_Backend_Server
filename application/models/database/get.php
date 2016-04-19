@@ -8,6 +8,7 @@ class Get extends CI_Model {
         parent::__construct();
         //Connect to database
         $this->load->database();
+        
     }
     
     public function generateCsv($data, $delimiter = ',') 
