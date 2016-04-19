@@ -1,0 +1,10 @@
+branch-defaults:
+  prerelease-v1.0:
+    environment: dbProject-env
+global:
+  application_name: db_project
+  default_ec2_keyname: keytestliee
+  default_platform: 64bit Amazon Linux 2016.03 v2.1.0 running PHP 5.6
+  default_region: us-west-2
+  profile: db_project
+  sc: git
