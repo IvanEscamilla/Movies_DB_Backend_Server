@@ -1,6 +1,8 @@
 branch-defaults:
   prerelease-v1.0:
     environment: dbProject-env
+  release-v1.3:
+    environment: dbProject-env
 global:
   application_name: db_project
   default_ec2_keyname: keytestliee

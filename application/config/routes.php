@@ -55,6 +55,8 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['admin/insert/new_movie'] = "admin/Users/insert_movies_info";
 $route['admin/movies/get_movie'] = "admin/Movies/get_movie_info";
+$route['admin/movies/dump_database'] = "admin/Movies/dump_database";
+
 
 /*Route for wargame*/
 $route['admin/algoritmos/wargame'] = "admin/Algoritmos/start_wargame";
