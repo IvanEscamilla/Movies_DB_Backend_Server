@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
+	'hostname' => 'aa1acd2zfai8xy4.chiuevdmdzqv.us-west-2.rds.amazonaws.com',
+	'username' => 'adminroot',
+	'password' => 'adminroot',
 	'database' => 'movies_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
